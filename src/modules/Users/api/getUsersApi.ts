@@ -1,9 +1,5 @@
 import apiClient from "@/src/services/apiClient";
+import{user} from "../types/types"
 
-interface users{
-    name:string
-    id:number
-    email:string
-}[]
-export const getUsersApi: () => Promise<users> = async () =>
-  {  return  await apiClient.get<users>("/users");}
+export const getUsersApi: () => Promise<user[]> = async () =>
+  {  return  await apiClient.get<user[]>("/users");}
