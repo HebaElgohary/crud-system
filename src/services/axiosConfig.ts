@@ -4,10 +4,10 @@ import { tokenServices } from "./tokenService";
 
 
 //axios instance configuration
-const axiosInstance:AxiosInstance=axios.create({
+export const axiosInstance:AxiosInstance=axios.create({
     baseURL:env.BASE_URL,
     timeout:env.API_TIMEOUT,
-    withCredentials:true,
+    withCredentials:true, //browser sends cookies automatically
     headers:{"Content-Type":"application/json"
         ,"Accept":"application/json"},
 })
