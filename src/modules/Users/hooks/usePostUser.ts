@@ -10,7 +10,6 @@ export const usePostUser = () => {
 
       onSuccess: (data) => {
         queryClient.invalidateQueries({ queryKey: ["users"] });
-        tokenServices.setToken(data.accessToken);
       },
     },
   });
