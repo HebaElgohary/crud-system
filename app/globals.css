@@ -1,1 +1,41 @@
 @import "tailwindcss";
+@import '../src/styles/variables.css';
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-alt);
+    scroll-behavior: smooth;
+  }
+}
+.ds-container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 16px;
+  max-width: 1320px;
+}
+@layer utilities{
+.ds-text-green{
+    color:var(--color-green)}
+    
+.ds-text-green-200{
+    color:var(--color-green-200)}
+    .ds-text-blue{
+    color:var(--color-blue)}
+      .ds-text-blue-200{
+    color:var(--color-blue-200)}
+      .ds-text-violet{
+    color:var(--color-viollet)}
+      .ds-text-violet-200{
+    color:var(--color-violet-200)}
+      .ds-text-warning{
+    color:var(--color-warning)} 
+     .ds-text-warning-200{
+    color:var(--color-warning-200)}
+      .ds-text-danger{
+    color:var(--color-danger)}
+      .ds-text-danger-200{
+    color:var(--color-danger-200)}
+
+}
