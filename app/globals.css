@@ -34,7 +34,7 @@
     background-color: var(--color-violet-200);
 }
 .ds-bg-green{
-    background-color: var(--color-green);
+    background-color: var(--color-green) !important;
 }.ds-bg-green-200{
     background-color: var(--color-green-200);
 }
@@ -58,7 +58,7 @@
       .ds-text-blue-200{
     color:var(--color-blue-200)}
       .ds-text-violet{
-    color:var(--color-viollet)}
+    color:var(--color-violet)}
       .ds-text-violet-200{
     color:var(--color-violet-200)}
       .ds-text-warning{

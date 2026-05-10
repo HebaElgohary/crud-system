@@ -13,7 +13,7 @@ export default function Home() {
     <div   ref={boxRef}
       className="!w-full min-h-screen p-10 bg-black text-white rounded-xl flex items-center justify-center" >
       home page
-      <Button className="ml-4 bg-green-300">button</Button>
+      <Button className="ml-4" variant="green">button</Button>
     </div>
   );
 }
