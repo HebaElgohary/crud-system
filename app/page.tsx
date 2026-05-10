@@ -4,6 +4,7 @@ import { fade } from "@/src/animations/fade";
 import MainLyout from "@/src/components/templates/MainLyout";
 import MainCard from "@/src/components/molecules/MainCard";
 import { User } from "../src/assets/icons/icons";
+import Button from "@/src/components/atoms/Button";
 export default function Home() {
   const boxRef = useRef(null);
   useEffect(() => {
@@ -13,9 +14,32 @@ export default function Home() {
   }, []);
   return (
     <MainLyout>
-    <div> 
-    <MainCard Icon={User} title="User" subtitle="Subtitle" btn="Button"/>
-    </div>
+      <div>
+   <MainCard
+  Icon={User}
+  title="User"
+  subtitle="Subtitle"
+  btn='Button'
+  
+  
+
+  titleProps={{
+    variant: 'black',
+    size: 'xl'
+  }}
+   subtitleProps={{
+    variant: 'black',
+    size: 'sm'
+  }}
+
+  btnProps={{
+    variant: 'green',
+    
+    // className: '!bg-red-400',
+  }}
+/>
+
+      </div>
     </MainLyout>
   );
 }

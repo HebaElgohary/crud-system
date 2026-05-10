@@ -4,10 +4,10 @@ import React from 'react'
 interface TitleProps {
     size: 'lg' | 'xl' | 'xxl'
     variant: 'black' | 'white'
-    children: React.ReactNode
+    children?: React.ReactNode
 
 }
-export default function Title({size,variant,children}:TitleProps) {
+export default function Title({size='lg',variant,children}:TitleProps) {
  const variants = {
    black: 'ds-text-black',
    white: 'ds-text-white',

@@ -1,13 +1,27 @@
-import React, { ComponentType } from 'react'
+import React, { ComponentProps, ComponentType } from 'react'
 import Icon from '../atoms/Icon'
 import Title from '../atoms/Title'
+import Subtitle from '../atoms/Subtitle'
+import Button from '../atoms/Button'
 
-export default function MainCard({title,subtitle,btn,Icon}:{title:string,subtitle:string,btn:string,Icon:ComponentType}) {
+interface MainCardProps 
+  {title:string,
+    subtitle:string,
+    Icon:ComponentType,
+    btn:string,
+    titleProps:ComponentProps<typeof Title>,
+    subtitleProps:ComponentProps<typeof Subtitle>,
+    btnProps:ComponentProps<typeof Button>,
+  }
+
+export default function MainCard({title,subtitle,btn,Icon,titleProps,subtitleProps,btnProps}:MainCardProps) {
   return (
     <div className='flex '>
-            <Icon Icon={Icon} />
+            {/* <Icon Icon={Icon} /> */}
         <div>
-            <Title size='xl' variant='black'>{title}</Title>
+            <Title  {...titleProps}>{title}</Title>
+            <Subtitle  {...subtitleProps}>{subtitle}</Subtitle>
+            <Button  {...btnProps}>{btn}</Button>
         </div>
 
     </div>

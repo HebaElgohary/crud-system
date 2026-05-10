@@ -1,13 +1,13 @@
 import React from "react";
 import { cn } from "@/src/lib/cn";
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   variant?: 'green'|'blue'|'violet'|'warning'|'danger';
 }
 
 export default function Button({ children, className, variant='green' }: Props) {
- 
+ console.log('chidren areeeeeeee',children)
  const variants = {
    green: 'ds-bg-green',
    blue: 'ds-bg-blue',
@@ -20,9 +20,9 @@ export default function Button({ children, className, variant='green' }: Props) 
   return (
     <button
       className={cn(variants[variant],
-    ' hover:bg-red-400  text-white font-bold !py-2 !px-4 rounded ',className)}
+    ' hover:bg-red-400 bg-red-500  text-black font-bold !py-2 !px-4 rounded ',className)}
     >
-      {children}
+    {children}
     </button>
   );
 }
