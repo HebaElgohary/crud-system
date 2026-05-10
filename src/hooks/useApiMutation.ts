@@ -2,7 +2,7 @@
 import { useMutation, type UseMutationOptions } from "@tanstack/react-query";
 
 interface UseApiMutationProps<TPayload, TResponse> {
-  mutationFn: (payload: TPayload) => Promise<TResponse>;
+  mutationFn: ( payload: TPayload) => Promise<TResponse>;
   options?: Omit<UseMutationOptions<TResponse, Error, TPayload>, "mutationFn">;
 }
 
