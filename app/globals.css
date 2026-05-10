@@ -69,6 +69,11 @@
     color:var(--color-danger)}
       .ds-text-danger-200{
     color:var(--color-danger-200)}
+      .ds-text-white{
+    color:var(--color-text-white)}
+      .ds-text-black{
+    color:var(--color-text-black)}
+    
 
 }
 /* ////////////////////////// */

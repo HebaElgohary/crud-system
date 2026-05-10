@@ -2,7 +2,7 @@ import { cn } from '@/src/lib/cn'
 import React from 'react'
 
 interface TitleProps {
-    size: 'sm' | 'md' | 'lg'
+    size: 'lg' | 'xl' | 'xxl'
     variant: 'black' | 'white'
     children: React.ReactNode
 
@@ -13,11 +13,11 @@ export default function Title({size,variant,children}:TitleProps) {
    white: 'ds-text-white',
  }
  const sizes = {
-   sm: 'text-sm',
-   md: 'text-md',
+   xl: 'text-xl',
+   xxl: 'text-xxl',
    lg: 'text-lg',
  }
     return (
-    <div className={cn(variants[variant],sizes[size])}>{children}</div>
+    <div className={cn(variants[variant],sizes[size],'font-bold')}>{children}</div>
   )
 }
