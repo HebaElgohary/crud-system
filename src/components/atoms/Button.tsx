@@ -4,9 +4,11 @@ interface Props {
   children?: React.ReactNode;
   className?: string;
   variant?: 'green'|'blue'|'violet'|'warning'|'danger';
+  size?: 'md' | 'lg'| 'xl';
 }
 
-export default function Button({ children, className, variant='green' }: Props) {
+
+export default function Button({ children,size='md', className, variant='green' }: Props) {
  console.log('chidren areeeeeeee',children)
  const variants = {
    green: 'ds-bg-green',
@@ -15,11 +17,15 @@ export default function Button({ children, className, variant='green' }: Props) 
    warning: 'ds-bg-warning',
    danger: 'ds-bg-danger',
  }
-
+const sizes = {
+  md: ' !px-8 !py-4',
+  lg: ' !px-10 !py-5',
+  xl: ' !px-12 !py-6',
+}
  
   return (
     <button
-      className={cn(variants[variant],
+      className={cn(variants[variant] ,sizes[size],
     ' hover:bg-red-400 bg-red-500  text-black font-bold !py-2 !px-4 rounded ',className)}
     >
     {children}

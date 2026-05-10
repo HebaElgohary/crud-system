@@ -14,13 +14,13 @@ export default function Home() {
   }, []);
   return (
     <MainLyout>
-      <div>
+      
    <MainCard
-  // icon={User}
   title="User"
   subtitle="Subtitle"
   btn='Button'
-  iconProps={{size: 50,
+  iconBg='green'
+  iconProps={{size: 30,
     Icon:User,
     className: 'text-green-500',
   }}
@@ -37,12 +37,13 @@ export default function Home() {
 
   btnProps={{
     variant: 'green',
+    size: 'xl',
+    className: 'text-white w-full'
     
-    // className: '!bg-red-400',
   }}
 />
 
-      </div>
+      
     </MainLyout>
   );
 }
