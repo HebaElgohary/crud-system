@@ -16,6 +16,38 @@
   max-width: 1320px;
 }
 @layer utilities{
+
+    /* background-color-utilities */
+.ds-bg-danger{
+    background-color: var(--color-danger);
+}
+.ds-bg-danger-200{
+    background-color: var(--color-danger-200);
+}.ds-bg-warning{
+    background-color: var(--color-warning);
+}.ds-bg-warning-200{
+    background-color: var(--color-warning-200);
+}
+.ds-bg-violet{
+    background-color: var(--color-violet);
+}.ds-bg-violet-200{
+    background-color: var(--color-violet-200);
+}
+.ds-bg-green{
+    background-color: var(--color-green);
+}.ds-bg-green-200{
+    background-color: var(--color-green-200);
+}
+.ds-bg-blue{
+    background-color: var(--color-blue);
+}.ds-bg-blue-200{
+    background-color: var(--color-blue-200);
+}
+
+    /* ////////////////// */
+
+
+    /* text-color-utilities */
 .ds-text-green{
     color:var(--color-green)}
     
@@ -39,3 +71,4 @@
     color:var(--color-danger-200)}
 
 }
+/* ////////////////////////// */
