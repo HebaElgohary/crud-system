@@ -16,11 +16,14 @@ export default function Home() {
     <MainLyout>
       <div>
    <MainCard
-  Icon={User}
+  // icon={User}
   title="User"
   subtitle="Subtitle"
   btn='Button'
-  
+  iconProps={{size: 50,
+    Icon:User,
+    className: 'text-green-500',
+  }}
   
 
   titleProps={{

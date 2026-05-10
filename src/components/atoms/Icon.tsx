@@ -1,9 +1,16 @@
+import { Sign } from 'crypto'
 import React, { ComponentType } from 'react'
 
-export default function Icon({Icon}:{Icon:ComponentType}) {
+interface Props 
+  {size: number,
+    className: string,
+    Icon:ComponentType<{size: number, className: string}>
+   }
+
+export default function Icon({Icon,size,className}:Props) {
   return (
     <div>
-        <Icon /> 
+        <Icon size={size} className={className} /> 
     </div>
   )
 }

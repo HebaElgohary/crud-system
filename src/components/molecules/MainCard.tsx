@@ -7,17 +7,17 @@ import Button from '../atoms/Button'
 interface MainCardProps 
   {title:string,
     subtitle:string,
-    Icon:ComponentType,
     btn:string,
     titleProps:ComponentProps<typeof Title>,
     subtitleProps:ComponentProps<typeof Subtitle>,
     btnProps:ComponentProps<typeof Button>,
+    iconProps:ComponentProps<typeof Icon>,
   }
 
-export default function MainCard({title,subtitle,btn,Icon,titleProps,subtitleProps,btnProps}:MainCardProps) {
+export default function MainCard({title,subtitle,btn,titleProps,subtitleProps,btnProps,iconProps}:MainCardProps) {
   return (
     <div className='flex '>
-            {/* <Icon Icon={Icon} /> */}
+            <Icon  {...iconProps} />
         <div>
             <Title  {...titleProps}>{title}</Title>
             <Subtitle  {...subtitleProps}>{subtitle}</Subtitle>
