@@ -6,6 +6,7 @@ import MainCard from "@/src/components/molecules/MainCard";
 import { User } from "../src/assets/icons/icons";
 import Button from "@/src/components/atoms/Button";
 import MainCards from "@/src/components/molecules/MainCards";
+import PageHeading from "@/src/components/molecules/PageHeading";
 export default function Home() {
   const boxRef = useRef(null);
   useEffect(() => {
@@ -15,37 +16,8 @@ export default function Home() {
   }, []);
   return (
     <MainLyout>
-      
-   {/* <MainCard
-  title="User"
-  subtitle="Subtitle"
-  btn='Button'
-  iconBg='green'
-  iconProps={{size: 30,
-    Icon:User,
-    
-  }}
-  
-
-  titleProps={{
-    variant: 'black',
-    size: 'xl'
-  }}
-   subtitleProps={{
-    variant: 'black',
-    size: 'sm'
-  }}
-
-  btnProps={{
-    variant: 'green',
-    size: 'xl',
-    className: 'text-white w-full'
-    
-  }}
-/> */}
-<MainCards/>
-
-      
+      <PageHeading title="Users" subtitle="Mange your users" />
+      <MainCards />
     </MainLyout>
   );
 }
