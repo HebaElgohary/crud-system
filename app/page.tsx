@@ -8,7 +8,7 @@ import TextInput from "@/src/components/molecules/TextInput";
 import UpdateForm from "@/src/components/molecules/form/UpdateForm";
 import PasswordInput from "@/src/components/molecules/PasswordInput";
 import CreateForm from "@/src/components/molecules/form/CreateForm";
-import UsersTable from "@/src/components/molecules/UsersTable";
+import UsersTable from "@/src/components/molecules/Table";
 export default function Home() {
   const boxRef = useRef(null);
   useEffect(() => {

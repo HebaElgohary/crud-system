@@ -3,8 +3,7 @@ import { tableHeading } from '../../data/table'
 import {Users} from '../../assets/icons/icons'
 import FormHeading from './form/FormHeading'
 import { useGetUsers } from '@/src/modules/Users/hooks/useGetUsers'
-export default function UsersTable() {
-   const{data,isLoading}= useGetUsers()
+export default function UsersTable({data}) {
   return (
    <div className='flex flex-col gap-5 !p-5'>
 
@@ -15,7 +14,7 @@ export default function UsersTable() {
     titleVariant='blue'
   />
 
-  <div className='overflow-hidden rounded-md border border-gray-400'>
+  <div className='overflow-hidden rounded-md border border-gray-200'>
 
     <table className='w-full text-sm text-left'>
 
