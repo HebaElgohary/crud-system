@@ -6,7 +6,7 @@ export default function AppProvider({ children }: { children: React.ReactNode })
     <div>
       <ReactQueryProvider>
       {children}
-</ReactQueryProvider>
+     </ReactQueryProvider>
       </div>
   )
 }
