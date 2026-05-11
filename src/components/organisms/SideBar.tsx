@@ -8,7 +8,7 @@ export default function SideBar() {
    const [active, setActive] = useState('users')
   
   return (
-    <div className='hidden md:block md:w-1/4 !p-5 '>
+    <div className='hidden md:block md:w-1/4 !p-5 !my-5 '>
     {/* heading */}
     <div className='flex gap-2 items-center'>
     <Icon className='ds-text-violet ' Icon={Users} size={20} />
