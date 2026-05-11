@@ -12,4 +12,7 @@ export interface MainCardProps{
 export interface PageHeadingProps{
     title:string,
     subtitle:string
+
+
 }
+export type formNameType='create'|'update'

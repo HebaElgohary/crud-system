@@ -1,4 +1,6 @@
-type getFormFieldsType = (formName: "update" | "create") => any[];
+import { formNameType } from "../types/types";
+
+type getFormFieldsType = (formName: formNameType) => any[];
 export const getFormFields: getFormFieldsType = (formName) => {
   const updateFields = [
     {
