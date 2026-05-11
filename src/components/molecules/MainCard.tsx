@@ -9,8 +9,8 @@ interface MainCardProps {
   subtitle: string;
   btn: string;
   iconBg: 'green'|'blue'|'violet'|'warning'|'danger';
-  titleProps: ComponentProps<typeof Title>;
-  subtitleProps: ComponentProps<typeof Subtitle>;
+  titleProps?: ComponentProps<typeof Title>;
+  subtitleProps?: ComponentProps<typeof Subtitle>;
   btnProps: ComponentProps<typeof Button>;
   iconProps: ComponentProps<typeof Icon>;
 }
@@ -32,17 +32,24 @@ export default function MainCard({
     warning: "ds-bg-warning-200",
     danger: "ds-bg-danger-200",
   };
+  const iconColor={
+    green:'ds-text-green',
+    blue:'ds-text-blue',
+    violet:'ds-text-violet',
+    warning:'ds-text-warning',
+    danger:'ds-text-danger'
+  }
 
   return (
-    <div className="flex flex-col items-start gap-2 !p-4 rounded-xl w-full md:w-1/3">
-      <div className="flex gap-2">
+    <div className="flex flex-col items-start gap-5 border-2 border-gray-200 !p-4 rounded-xl w-full md:w-1/3">
+      <div className="flex gap-3">
         <span
           className={` flex items-center justify-center ${iconBgs[iconBg]} !p-2 rounded-xl `}
         >
           {" "}
-          <Icon {...iconProps} />
+          <Icon {...iconProps} className={iconColor[iconBg]} />
         </span>
-        <div className="flex flex-col gap-">
+        <div className="flex flex-col ">
           <Title {...titleProps}>{title}</Title>
           <Subtitle {...subtitleProps}>{subtitle}</Subtitle>
         </div>

@@ -9,7 +9,6 @@ interface Props {
 
 
 export default function Button({ children,size='md', className, variant='green' }: Props) {
- console.log('chidren areeeeeeee',children)
  const variants = {
    green: 'ds-bg-green',
    blue: 'ds-bg-blue',
@@ -26,7 +25,7 @@ const sizes = {
   return (
     <button
       className={cn(variants[variant] ,sizes[size],
-    ' hover:bg-red-400 bg-red-500  text-black font-bold !py-2 !px-4 rounded ',className)}
+    '  bg-red-500 w-full text-white font-bold !py-2 !px-4 rounded ',className)}
     >
     {children}
     </button>

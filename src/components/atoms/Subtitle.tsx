@@ -2,12 +2,12 @@ import { cn } from '@/src/lib/cn'
 import React from 'react'
 
 interface SubtitleProps {
-    size: 'sm' | 'md' | 'xs'
-    variant: 'black' | 'white' | 'disabled'
+    size?: 'sm' | 'md' | 'xs'
+    variant?: 'black' | 'white' | 'disabled'
     children?: React.ReactNode
 
 }
-export default function Subtitle({size,variant,children}:SubtitleProps) {
+export default function Subtitle({size='sm',variant='black',children}:SubtitleProps) {
  console.log('title is ',children)
   const variants = {
    black: 'ds-text-black',

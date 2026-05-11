@@ -5,6 +5,7 @@ import MainLyout from "@/src/components/templates/MainLyout";
 import MainCard from "@/src/components/molecules/MainCard";
 import { User } from "../src/assets/icons/icons";
 import Button from "@/src/components/atoms/Button";
+import MainCards from "@/src/components/molecules/MainCards";
 export default function Home() {
   const boxRef = useRef(null);
   useEffect(() => {
@@ -15,14 +16,14 @@ export default function Home() {
   return (
     <MainLyout>
       
-   <MainCard
+   {/* <MainCard
   title="User"
   subtitle="Subtitle"
   btn='Button'
   iconBg='green'
   iconProps={{size: 30,
     Icon:User,
-    className: 'text-green-500',
+    
   }}
   
 
@@ -41,7 +42,8 @@ export default function Home() {
     className: 'text-white w-full'
     
   }}
-/>
+/> */}
+<MainCards/>
 
       
     </MainLyout>
