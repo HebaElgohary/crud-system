@@ -5,9 +5,10 @@ interface SubtitleProps {
     size?: 'sm' | 'md' | 'xs'
     variant?: 'black' | 'white' | 'disabled'|'violet'
     children?: React.ReactNode
+    className?: string
 
 }
-export default function Subtitle({size='sm',variant='black',children}:SubtitleProps) {
+export default function Subtitle({className,size='sm',variant='black',children}:SubtitleProps) {
  console.log('title is ',children)
   const variants = {
    black: 'ds-text-black',
@@ -21,6 +22,6 @@ export default function Subtitle({size='sm',variant='black',children}:SubtitlePr
    xs: 'text-xs',
  }
     return (
-    <div className={cn(variants[variant],sizes[size],)}>{children}</div>
+    <div className={cn(variants[variant],sizes[size],className)}>{children}</div>
   )
 }

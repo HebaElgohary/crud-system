@@ -3,8 +3,9 @@ import { cn } from "@/src/lib/cn";
 interface Props {
   children?: React.ReactNode;
   className?: string;
-  variant?: 'green'|'blue'|'violet'|'warning'|'danger';
+  variant?: 'green'|'blue'|'violet'|'warning'|'danger'|'outline';
   size?: 'md' | 'lg'| 'xl';
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 
