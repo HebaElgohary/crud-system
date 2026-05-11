@@ -21,7 +21,7 @@ export default function Home() {
     <MainLyout>
       <PageHeading title="Users" subtitle="Mange your users" />
       <MainCards />
-     <TextInput name="name" label="Name" />
+     <TextInput placeholder="enter your name" name="name" label="Name" />
     </MainLyout>
   );
 }

@@ -6,12 +6,14 @@ export const getFormFields: getFormFieldsType = (formName) => {
       label: "Name",
       type: "text",
       name: "name",
+      placeholder: "Enter name",
     },
     {
       id: 2,
       label: "Email",
       type: "email",
       name: "email",
+      placeholder: "Enter email",
     },
   ];
   const createFields = [
