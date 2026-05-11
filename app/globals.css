@@ -110,4 +110,9 @@
   .ds-text-black {
     color: var(--color-text-black);
   }
+  .ds-text-disabled{
+    
+    color: var(--color-text-disabled);
+  }
+  
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Input() {
+export default function Input({name,id,type}:{name:string,id:string,type:string}) {
   return (
-    <input className='border border-gray-400 !px-4 !py-2 rounded-md'  />
+    <input id={id} type={type} className='border border-gray-400 !px-4 !py-2 rounded-md'  />
   )
 }

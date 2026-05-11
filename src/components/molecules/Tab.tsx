@@ -19,12 +19,12 @@ export default function Tab({
       className={`flex gap-3 items-center rounded-lg !p-2 hover:cursor-pointer ${selected ? "ds-bg-violet-200" : ""} `}
     >
       <Icon
-        className={selected ? "ds-text-violet" : "ds-text-black"}
+        className={selected ? "ds-text-violet" : "ds-text-disabled"}
         size={20}
         {...iconProps}
       />
       <Subtitle
-        variant={selected ? "violet" : "black"}
+        variant={selected ? "violet" : "disabled"}
         className={"font-semibold "}
         size="sm"
         {...titleProps}
