@@ -41,7 +41,7 @@ export default function MainCard({
   }
 
   return (
-    <div className="flex flex-col items-start gap-5 border-2 border-gray-200 !p-4 rounded-xl w-full md:w-1/3">
+    <div className="flex flex-col items-start gap-5 border-2 border-gray-200 !p-4 rounded-xl ">
       <div className="flex gap-3">
         <span
           className={` flex items-center justify-center ${iconBgs[iconBg]} !p-2 rounded-xl `}
