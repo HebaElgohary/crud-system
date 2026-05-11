@@ -10,6 +10,7 @@ import PageHeading from "@/src/components/molecules/PageHeading";
 import Input from "@/src/components/atoms/Input";
 import Label from "@/src/components/atoms/Label";
 import TextInput from "@/src/components/molecules/TextInput";
+import UpdateForm from "@/src/components/molecules/form/UpdateForm";
 export default function Home() {
   const boxRef = useRef(null);
   useEffect(() => {
@@ -21,7 +22,8 @@ export default function Home() {
     <MainLyout>
       <PageHeading title="Users" subtitle="Mange your users" />
       <MainCards />
-     <TextInput placeholder="enter your name" name="name" label="Name" />
+      <TextInput placeholder="enter your name" name="name" label="Name" />
+      <UpdateForm />
     </MainLyout>
   );
 }
