@@ -3,7 +3,7 @@ import React from 'react'
 
 interface TitleProps {
     size?: 'lg' | 'xl' | 'xxl'|'md'|'sm'
-    variant?: 'black' | 'white' | 'blue' |'violet'
+    variant?: 'black' | 'white' | 'blue' |'violet'|'green'|'warning'|'danger'
     children?: React.ReactNode
 
 }
@@ -13,6 +13,9 @@ export default function Title({size='lg',variant='black',children}:TitleProps) {
    white: 'ds-text-white',
    blue: 'ds-text-blue',
    violet: 'ds-text-violet',
+   green: 'ds-text-green',
+   warning: 'ds-text-warning',
+   danger: 'ds-text-danger',
  }
  const sizes = {
    xl: 'text-xl',

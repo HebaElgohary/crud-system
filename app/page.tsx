@@ -8,6 +8,7 @@ import TextInput from "@/src/components/molecules/TextInput";
 import UpdateForm from "@/src/components/molecules/form/UpdateForm";
 import PasswordInput from "@/src/components/molecules/PasswordInput";
 import CreateForm from "@/src/components/molecules/form/CreateForm";
+import UsersTable from "@/src/components/molecules/UsersTable";
 export default function Home() {
   const boxRef = useRef(null);
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Home() {
       <PageHeading title="Users" subtitle="Mange your users" />
       <MainCards />
       <TextInput placeholder="enter your name" name="name" label="Name" />
+      <UsersTable />
       <UpdateForm />
       <CreateForm />
       <PasswordInput placeholder="enter your password" name="password" label="Password" />

@@ -60,6 +60,9 @@
   .ds-bg-blue-200 {
     background-color: var(--color-blue-200);
   }
+  .ds-bg-gray {
+    background-color: var(--color-gray);
+  }
 
   /* text-color-utilities */
 
