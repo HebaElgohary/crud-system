@@ -3,26 +3,16 @@ import { ComponentType } from 'react'
 interface Props 
   {size?: number,
     className?: string,
-    fill?: 'blue'|'green'|'violet'|'warning'|'danger'|'none',
-    Icon:ComponentType<{size: number, className: string, fill: string}>
+    Icon:ComponentType<{size: number, className: string }>
    }
 
 
-export default function Icon({Icon,size=30,className='',fill='none'}:Props) {
- const fills={
-  blue: 'ds-text-blue',
-  green: 'ds-text-green',
-  violet: 'ds-text-violet',
-  
-  warning: 'ds-text-warning',
-  danger: 'ds-text-danger',
-  none: 'none'
+export default function Icon({Icon,size=30,className=''}:Props) {
 
- }
  
   return (
     <div>
-        <Icon size={size} className={className} fill={fills[fill]} /> 
+        <Icon size={size} className={className}  /> 
     </div>
   )
 }
