@@ -11,6 +11,7 @@ import Input from "@/src/components/atoms/Input";
 import Label from "@/src/components/atoms/Label";
 import TextInput from "@/src/components/molecules/TextInput";
 import UpdateForm from "@/src/components/molecules/form/UpdateForm";
+import PasswordInput from "@/src/components/molecules/PasswordInput";
 export default function Home() {
   const boxRef = useRef(null);
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function Home() {
       <MainCards />
       <TextInput placeholder="enter your name" name="name" label="Name" />
       <UpdateForm />
+      <PasswordInput placeholder="enter your password" name="password" label="Password" />
     </MainLyout>
   );
 }
