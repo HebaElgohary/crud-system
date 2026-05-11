@@ -7,6 +7,7 @@ import { User } from "../src/assets/icons/icons";
 import Button from "@/src/components/atoms/Button";
 import MainCards from "@/src/components/molecules/MainCards";
 import PageHeading from "@/src/components/molecules/PageHeading";
+import Input from "@/src/components/atoms/Input";
 export default function Home() {
   const boxRef = useRef(null);
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function Home() {
     <MainLyout>
       <PageHeading title="Users" subtitle="Mange your users" />
       <MainCards />
+      <Input />
     </MainLyout>
   );
 }
