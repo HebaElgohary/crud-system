@@ -20,14 +20,14 @@ export default function Button({ children,size='md', className, variant='green',
  }
 const sizes = {
   md: '!px-8 !py-4',
-  lg: '!px-10 !py-5',
+  lg: '!px-10 !py-5 ',
   xl: '!px-12 !py-6',
 }
  
   return (
     <button
       className={cn(variants[variant] ,sizes[size],
-    ` bg-red-500 ${fill? 'w-full' : 'w-fit'} text-white font-bold !py-2 !px-4 rounded `,className)}
+    ` bg-red-500 ${fill? 'w-full' : 'w-fit'} text-white  font-bold  rounded `,className)}
     >
     {children}
     </button>

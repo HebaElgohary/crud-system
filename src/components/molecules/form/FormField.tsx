@@ -1,3 +1,4 @@
+import PasswordInput from '../PasswordInput'
 import TextInput from '../TextInput'
 
 export default function FormField(props: any) {
@@ -5,9 +6,11 @@ export default function FormField(props: any) {
  if (type === 'text' || type === 'email')
     return (
     <TextInput {...props} />
+
   )
-  else
-  return (
-    <div>Form Field</div>
+  else if (type === 'password')
+    return (
+    <PasswordInput {...props} />
   )
+ 
 }
