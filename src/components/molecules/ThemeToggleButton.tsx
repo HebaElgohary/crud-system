@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export default function ThemeToggleButton() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function ThemeToggleButton() {
           w-5
           transition-all
           duration-300
-          ${isDark ? "rotate-0 scale-100" : "-rotate-90 scale-0"}
+          ${isDark ? "rotate-0 scale-100" : "rotate-90 scale-0"}
         `}
       />
     </button>
