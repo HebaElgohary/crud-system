@@ -4,7 +4,7 @@ interface Props {
   children?: React.ReactNode;
   className?: string;
   variant?: 'green'|'blue'|'violet'|'warning'|'danger';
-  size?: 'md' | 'lg'| 'xl';
+  size?: 'md' | 'lg'| 'xl'|'sm';
   fill?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -19,6 +19,7 @@ export default function Button({ children,size='md', className, variant='green',
    danger: 'ds-bg-danger',
  }
 const sizes = {
+  sm: '!px-6 !py-3',
   md: '!px-8 !py-4',
   lg: '!px-10 !py-5 ',
   xl: '!px-12 !py-6',

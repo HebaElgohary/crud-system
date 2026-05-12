@@ -7,7 +7,8 @@ export default function UsersTable  () {
 
   return (
     <div>
-        <Table data={data} isLoading={isLoading}/>
+      {isLoading && <p>Loading...</p>}
+        <Table data={data} />
     </div>
   )
 }
