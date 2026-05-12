@@ -9,6 +9,7 @@ import UpdateForm from "@/src/components/molecules/form/UpdateForm";
 import PasswordInput from "@/src/components/molecules/PasswordInput";
 import CreateForm from "@/src/components/molecules/form/CreateForm";
 import UsersTable from "@/src/modules/Users/components/UsersTable";
+import UserDetailsCard from "@/src/components/molecules/UserDetailsCard";
 export default function Home() {
   const boxRef = useRef(null);
   useEffect(() => {
@@ -20,10 +21,18 @@ export default function Home() {
     <MainLyout>
       <PageHeading title="Users" subtitle="Mange your users" />
       <MainCards />
+
+      <div className="flex  lg:flex-row flex-col justify-around w-full">
+      <div>
       <UsersTable />
-      <UpdateForm />
       <CreateForm />
-      <PasswordInput placeholder="enter your password" name="password" label="Password" />
+      </div>
+
+     <div className="flex flex-col gap-5 w-full lg:w-1/4 ">
+      <UserDetailsCard data={{id:1,name:"name",email:"email"}} />
+     <UpdateForm />
+    </div>
+     </div>
     </MainLyout>
   );
 }

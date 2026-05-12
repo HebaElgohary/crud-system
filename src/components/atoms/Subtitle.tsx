@@ -3,7 +3,7 @@ import React from 'react'
 
 interface SubtitleProps {
     size?: 'sm' | 'md' | 'xs'
-    variant?: 'black' | 'white' | 'disabled'|'violet'
+    variant?: 'black' | 'white' | 'disabled'|'violet' |'gray'
     children?: React.ReactNode
     className?: string
 
@@ -15,6 +15,7 @@ export default function Subtitle({className,size='sm',variant='black',children}:
    white: 'ds-text-white',
    disabled: 'ds-text-disabled',
    violet: 'ds-text-violet',
+   gray: 'ds-text-gray',
  }
  const sizes = {
    sm: 'text-sm',

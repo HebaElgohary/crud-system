@@ -8,7 +8,7 @@ import Icon from "../atoms/Icon";
 import Button from "../atoms/Button";
 export default function Table({ data: users }: { data?: user[] }) {
   return (
-    <div className="flex flex-col gap-5 w-full lg:w-2/3 !p-5 border ds-border-disabled rounded-xl ds-bg-white">
+    <div className="flex flex-col gap-5  !p-5 border ds-border-disabled rounded-xl ds-bg-white">
       <FormHeading
         label="All Users"
         icon={Users}
@@ -16,7 +16,7 @@ export default function Table({ data: users }: { data?: user[] }) {
         titleVariant="blue"
       />
 
-      <div className="overflow-scroll rounded-md  ds-border-disabled">
+      <div className="overflow-scroll lg:overflow-hidden rounded-md  ds-border-disabled">
         <table className="w-full text-sm text-left ds-text-white ">
           <thead className="text-lg font-bold text-center">
             <tr>
@@ -31,12 +31,12 @@ export default function Table({ data: users }: { data?: user[] }) {
               ))}
             </tr>
           </thead>
-          <tbody className="text-center !ds-bg-main ds-text-black ">
+          <tbody className="text-center  ds-text-black ">
             {users &&
               users.map((user: user) => (
                 <tr
                   key={user.id}
-                  className= " text-center " 
+                  className= "even:bg-[var(--color-bg-main)]  text-center " 
                 >
                   {" "}
                   <td className=" ">{user.id}</td>

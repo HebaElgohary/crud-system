@@ -5,20 +5,20 @@ import { user } from '@/src/modules/Users/types/types'
 
 export default function UserDetailsCard({data}:{data:user}) {
   return (
-    <div className='flex flex-col border border-gray-300 '>
+    <div className='flex ds-bg-main !p-5 rounded-xl h-fit flex-col border border-gray-300 '>
         <FormHeading label='User Details' icon={User} iconColor='blue' titleVariant='black'/>
    {/* id */}
-    <div className='flex flex-row gap-2 items-center !mb-6'>
+    <div className='flex flex-row gap-11 items-center ds-text-black !mb-6'>
 <span>ID</span>
 <span>{data.id}</span>
     </div>
     {/*name  */}
-    <div>
+    <div className='flex flex-row gap-11 items-center ds-text-black !mb-6'>
         <span>Name</span>
         <span>{data.name}</span>
     </div>
     {/* email */}
-    <div>
+    <div className='flex flex-row gap-11 items-center ds-text-black !mb-6'>
         <span>Email</span>
         <span>{data.email}</span>
     </div>

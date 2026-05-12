@@ -6,7 +6,7 @@ export default function UsersTable  () {
    const{data,isLoading}= useGetUsers()
 
   return (
-    <div>
+    <div className='flex flex-col gap-5 '>
       {isLoading && <p>Loading...</p>}
         <Table data={data} />
     </div>

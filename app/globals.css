@@ -62,6 +62,12 @@
   .ds-bg-gray {
     background-color: var(--color-gray);
   }
+    .ds-bg-main {
+    background-color: var(--color-bg-main);
+  }
+    .ds-bg-black {
+    background-color: var(--color-text-black);
+  }
 
   /* text-color-utilities */
 
@@ -115,6 +121,9 @@
   .ds-text-disabled {
     color: var(--color-text-disabled);
   }
+   .ds-text-gray {
+    color: var(--color-text-gray);
+  }
   /* borders */
   .ds-border-disabled {
     border-color: var(--color-text-disabled);
@@ -123,9 +132,10 @@
   .ds-border-white {
     border-color: var(--color-text-white);
   }
+  .ds-container{
+    margin:  5 22;
+  }
 
   /* bg  */
-  .ds-bg-main {
-    background-color: var(--color-bg-main);
-  }
+
 }
