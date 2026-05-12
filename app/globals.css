@@ -117,5 +117,14 @@
     
     color: var(--color-text-disabled);
   }
+  /* borders */
+    .ds-border-disabled{
+    border-color: var(--color-text-disabled);
+    border-style: solid;
+
+  }
+      .ds-border-white{
+    border-color: var(--color-text-white);
+  }
   
 }

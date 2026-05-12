@@ -8,7 +8,7 @@ import Icon from "../atoms/Icon";
 import Button from "../atoms/Button";
 export default function Table({ data: users }: { data?: user[] }) {
   return (
-    <div className="flex flex-col gap-5 w-full lg:w-2/3 !p-5 border border-gray-200 rounded-xl">
+    <div className="flex flex-col gap-5 w-full lg:w-2/3 !p-5 border ds-border-disabled rounded-xl">
       <FormHeading
         label="All Users"
         icon={Users}
@@ -16,8 +16,8 @@ export default function Table({ data: users }: { data?: user[] }) {
         titleVariant="blue"
       />
 
-      <div className="overflow-hidden rounded-md border border-gray-200">
-        <table className="w-full text-sm text-left">
+      <div className="overflow-hidden rounded-md  ds-border-disabled">
+        <table className="w-full text-sm text-left ">
           <thead className="text-lg font-bold text-center">
             <tr>
               {tableHeading.map((heading) => (
