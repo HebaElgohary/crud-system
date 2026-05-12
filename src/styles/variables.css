@@ -23,3 +23,8 @@
   --color-text-black: #000;
   --color-text-disabled: #817f7f;
 }
+.dark{
+    --color-text-white: #000;
+  --color-text-black: #ffff;
+  --color-text-disabled: #e2e0e0;
+}

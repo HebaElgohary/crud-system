@@ -20,7 +20,6 @@ export default function Home() {
     <MainLyout>
       <PageHeading title="Users" subtitle="Mange your users" />
       <MainCards />
-      <TextInput placeholder="enter your name" name="name" label="Name" />
       <UsersTable />
       <UpdateForm />
       <CreateForm />
