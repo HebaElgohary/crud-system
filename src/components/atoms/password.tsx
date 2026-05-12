@@ -32,7 +32,7 @@ export default function Password({
     >
 
       <input
-        className='w-full focus:outline-none'
+        className='w-full focus:outline-none placeholder:text-gray-400'
         id={id}
         name={name}
         type={showPassword ? 'text' : type}

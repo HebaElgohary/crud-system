@@ -8,11 +8,11 @@ export default function SideBar() {
    const [active, setActive] = useState('users')
   
   return (
-    <div className='hidden md:block md:w-1/4 !p-5 !my-5 '>
+    <div className='hidden md:block lg:w-1/5 !p-7  border border-gray-300  '>
     {/* heading */}
     <div className='flex gap-2 items-center'>
-    <Icon className='ds-text-violet ' Icon={Users} size={25} />
-    <Title variant='blue' size='sm'>User Management</Title>
+    <Icon className='ds-text-violet ' Icon={Users} size={30} />
+    <Title variant='blue' size='md'>User Management</Title>
 </div>
 
 {/* ///////// */}

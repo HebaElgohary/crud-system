@@ -16,17 +16,17 @@ export default function Tab({
   return (
     <div
       onClick={onClick}
-      className={`flex gap-3 items-center rounded-lg !p-2 hover:cursor-pointer ${selected ? "ds-bg-violet-200" : ""} `}
+      className={`flex gap-3 items-center rounded-lg !p-3 hover:cursor-pointer ${selected ? "ds-bg-violet-200" : ""} `}
     >
       <Icon
         className={selected ? "ds-text-violet" : "ds-text-gray"}
-        size={20}
+        size={25}
         {...iconProps}
       />
       <Subtitle
         variant={selected ? "violet" : "gray"}
         className={"font-semibold "}
-        size="sm"
+        size="md"
         {...titleProps}
       >
         {titleProps.children}

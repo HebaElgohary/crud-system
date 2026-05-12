@@ -20,9 +20,10 @@ export default function Home() {
   return (
     <MainLyout>
       <PageHeading title="Users" subtitle="Mange your users" />
+<div className="!px-11 !my-3 ">
       <MainCards />
 
-      <div className="flex  lg:flex-row flex-col justify-around w-full">
+      <div className="flex gap-3 lg:flex-row flex-col justify-around w-full">
       <div>
       <UsersTable />
       <CreateForm />
@@ -32,6 +33,7 @@ export default function Home() {
       <UserDetailsCard data={{id:1,name:"name",email:"email"}} />
      <UpdateForm />
     </div>
+     </div>
      </div>
     </MainLyout>
   );
