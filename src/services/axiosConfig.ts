@@ -7,7 +7,7 @@ import { tokenServices } from "./tokenService";
 export const axiosInstance:AxiosInstance=axios.create({
     baseURL:env.BASE_URL,
     timeout:env.API_TIMEOUT,
-    withCredentials:true, //browser sends cookies automatically
+    // withCredentials:true, //browser sends cookies automatically
     headers:{"Content-Type":"application/json"
         ,"Accept":"application/json"},
 })
