@@ -19,7 +19,7 @@ export default function Button({ children,size='md', className, variant='green',
    danger: 'ds-bg-danger',
  }
 const sizes = {
-  sm: '!px-6 !py-3',
+  sm: '!px-6 !py-2',
   md: '!px-8 !py-4',
   lg: '!px-10 !py-5 ',
   xl: '!px-12 !py-6',

@@ -54,7 +54,7 @@ export default function MainCard({
           <Subtitle {...subtitleProps}>{subtitle}</Subtitle>
         </div>
       </div>
-      <Button {...btnProps}>{btn}</Button>
+      <Button  {...btnProps}>{btn}</Button>
     </div>
   );
 }
