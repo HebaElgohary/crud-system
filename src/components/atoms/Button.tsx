@@ -2,6 +2,7 @@ import React from "react";
 import { cn } from "@/src/lib/cn";
 interface Props {
   children?: React.ReactNode;
+  type?: "button" | "submit" | "reset";
   className?: string;
   variant?: 'green'|'blue'|'violet'|'warning'|'danger';
   size?: 'md' | 'lg'| 'xl'|'sm';
@@ -10,7 +11,7 @@ interface Props {
 }
 
 
-export default function Button({ children,size='md', className, variant='green',fill=false}: Props) {
+export default function Button({ children,size='md', className,type='button', variant='green',fill=false}: Props) {
  const variants = {
    green: 'ds-bg-green',
    blue: 'ds-bg-blue',
@@ -26,7 +27,7 @@ const sizes = {
 }
  
   return (
-    <button
+    <button type={type}
       className={cn(variants[variant] ,sizes[size],
     ` bg-red-500 ${fill? 'w-full' : 'w-fit'} text-white  font-bold  rounded `,className)}
     >

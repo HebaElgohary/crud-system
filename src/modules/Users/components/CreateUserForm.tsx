@@ -1,16 +1,17 @@
 'use client'
 import {usePostUser} from '@/src/modules/Users/hooks/usePostUser'
 import CreateForm from '../../../components/molecules/form/CreateForm'
+import {  postPayload } from '../types/types'
 export default function CreateUserForm() {
     const {mutate,isPending}=usePostUser()
-   const handleSubmit = (formData: {
-    name: string
-    email: string,
-    password: string
-  }) => {
-    mutate(formData)
+
+    type handleSubmitType=(formData:postPayload)=>void
+
+   const handleSubmit:handleSubmitType = (formData) => {
+    mutate(formData )
+    alert('User created successfully')
   }
   return (
-    <CreateForm onSubmit={mutate}/>
+    <CreateForm onSubmit={handleSubmit}/>
   )
 }
