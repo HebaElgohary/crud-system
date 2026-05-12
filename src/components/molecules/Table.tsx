@@ -48,7 +48,7 @@ export default function Table({ data: users }: { data?: user[] }) {
                       size="sm"
                       fill
 
-                      className="!mt-1 !mx-3 rounded-lg"
+                      className="!mt-1 !mx-3 rounded-md"
                     >
                       View
                     </Button>
@@ -56,7 +56,7 @@ export default function Table({ data: users }: { data?: user[] }) {
                       variant="warning"
                       size="sm"
                       fill
-                      className="!mt-1 !mx-3 rounded-lg"
+                      className="!mt-1 !mx-3 rounded-md"
                     >
                       Edit
                     </Button>
@@ -65,7 +65,7 @@ export default function Table({ data: users }: { data?: user[] }) {
                       size="sm"
                       fill
 
-                      className="!mt-1 !mx-3 rounded-lg"
+                      className="!mt-1 !mx-3 rounded-md"
                     >
                       Delete
                     </Button>

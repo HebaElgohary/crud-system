@@ -15,7 +15,7 @@ export default function Form({label,icon,formName,btn,layout='rows'}: {layout?:'
     <FormField key={field.id} {...field} />
    )  }
    <div>
-   <Button variant='violet' size='md' className='!mt-1 !mx-3'>{btn}</Button>
+   <Button variant='violet' size='sm' className='!mt-1 !mx-3'>{btn}</Button>
 </div>
 </form>
     </div>

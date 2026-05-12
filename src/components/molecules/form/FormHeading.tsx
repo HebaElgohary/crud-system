@@ -3,7 +3,7 @@ import Icon from '../../atoms/Icon'
 import Title from '../../atoms/Title'
 
 type iconColorType = 'green' | 'blue' | 'violet' | 'warning' | 'danger'
-type titleVariantType = 'green' | 'blue' | 'violet' | 'warning' | 'danger'
+type titleVariantType = 'green' | 'blue' | 'violet' | 'warning' | 'danger'|'black'
 
 export default function FormHeading({titleVariant='violet',label,icon,iconColor='violet'}: {titleVariant?:titleVariantType,iconColor?:iconColorType,label:string,icon:ComponentType<{size: number, className: string}>}) {
  const iconBgs = {
