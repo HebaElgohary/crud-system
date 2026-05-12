@@ -21,7 +21,7 @@
   /* text colors */
   --color-text-white: #fff;
   --color-text-black: #000;
-  --color-text-disabled: #817f7f;
+  --color-text-disabled: #c9c5c5;
 
 
 /* bg */
@@ -52,6 +52,6 @@
   --color-text-disabled: #a6a5a5;
 
   /* bg */
- --color-bg-main:#000;
+ --color-bg-main:#202020;
 
 }

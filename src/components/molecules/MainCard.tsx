@@ -41,7 +41,7 @@ export default function MainCard({
   }
 
   return (
-    <div  className="flex flex-col items-start justify-center gap-6 border-2 border-gray-200 !px-2 !py-4 rounded-xl ">
+    <div  className="flex flex-col ds-bg-main  items-start justify-center gap-6 border-2 ds-border-disabled !px-2 !py-4 rounded-xl ">
       <div className="flex gap-3">
         <span
           className={` flex items-center justify-center ${iconBgs[iconBg]} !p-2 rounded-xl `}
