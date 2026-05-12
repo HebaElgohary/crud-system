@@ -1,9 +1,16 @@
 'use client'
 import {usePostUser} from '@/src/modules/Users/hooks/usePostUser'
-import {CreatForm} from '../molecules/form/CreateForm'
+import CreateForm from '../../../components/molecules/form/CreateForm'
 export default function CreateUserForm() {
-    const {mutate}=usePostUser()
+    const {mutate,isPending}=usePostUser()
+   const handleSubmit = (formData: {
+    name: string
+    email: string,
+    password: string
+  }) => {
+    mutate(formData)
+  }
   return (
-    <div>CreateUserForm</div>
+    <CreateForm onSubmit={mutate}/>
   )
 }

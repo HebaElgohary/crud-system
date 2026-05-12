@@ -5,12 +5,14 @@ import FormField from './FormField'
 import { formNameType } from '@/src/types/types'
 import Button from '../../atoms/Button'
 
-export default function Form({label,icon,formName,btn,layout='rows'}: {layout?:'cols'|'rows',label:string,icon:ComponentType<{size: number, className: string}>,formName:formNameType,btn:string}) {
+type onSubmitType = ()=>void
+
+export default function Form({label,icon,formName,btn,layout='rows',onSubmit}: {layout?:'cols'|'rows',label:string,icon:ComponentType<{size: number, className: string}>,formName:formNameType,btn:string,onSubmit?:onSubmitType}) {
   return (
     <div className='border border-gray-300 ds-bg-violet-200 !p-5 rounded-xl !my-5 '>
 <FormHeading label={label} icon={icon} />
 
-<form action="" className={layout === 'cols' ? 'flex flex-col gap-5 mt-5  ' : 'flex flex-col lg:flex-row gap-5 mt-5 items-stretch  lg:items-end '} >
+<form onSubmit={onSubmit} className={layout === 'cols' ? 'flex flex-col gap-5 mt-5  ' : 'flex flex-col lg:flex-row gap-5 mt-5 items-stretch  lg:items-end '} >
    { getFormFields(formName).map((field)=>
     <FormField key={field.id} {...field} />
    )  }
