@@ -9,7 +9,6 @@ export default function CreateUserForm() {
 
    const handleSubmit:handleSubmitType = (formData) => {
     mutate(formData )
-    alert('User created successfully')
   }
   return (
     <CreateForm onSubmit={handleSubmit}/>
