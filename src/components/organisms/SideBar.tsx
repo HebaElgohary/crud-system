@@ -1,7 +1,7 @@
 import  { useState } from 'react'
 import Title from '../atoms/Title'
 import Icon from '../atoms/Icon'
-import { Users,UserPlus,Settings, MoveLeft   } from '../../assets/icons/icons'
+import { Users,UserPlus,Settings, MoveLeft, LogOut   } from '../../assets/icons/icons'
 import Tab from '../molecules/Tab'
 
 export default function SideBar() {
@@ -24,7 +24,7 @@ export default function SideBar() {
 <Tab onClick={() => setActive('settings')} selected={active === 'settings'} iconProps={{Icon:Settings,size:20}}  titleProps={{children:'Settings',size:'sm'}} />
 </div>
 {/* ////////// */}
-<span className='fixed bottom-22 left-14 flex gap-2 items-center ds-text-gray'>logout <Icon Icon={MoveLeft} size={20} /></span>
+<span className='fixed bottom-22 left-14 flex gap-2 items-center ds-text-disabled'> <Icon Icon={LogOut} size={20} />logout </span>
 
     </div>
   )
