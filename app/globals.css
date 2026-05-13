@@ -129,6 +129,10 @@
     border-color: var(--color-text-disabled);
     border-style: solid;
   }
+   .ds-border-gray {
+    border-color: var(--color-gray);
+    border-style: solid;
+  }
   .ds-border-white {
     border-color: var(--color-text-white);
   }
