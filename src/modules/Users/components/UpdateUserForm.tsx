@@ -11,7 +11,6 @@ export default function UpdateUserForm({id}:{id:number}) {
     const onsubmit=(data:editPayload)=>
         
         { mutate(data)
-            alert('User updated successfully')
          }
   return (
     <div>
