@@ -20,7 +20,7 @@ export default function Button({onClick, children,size='md', className,type='but
    danger: 'ds-bg-danger',
  }
 const sizes = {
-  sm: '!px-6 !py-2',
+  sm: '!px-4 !py-2 ',
   md: '!px-8 !py-4',
   lg: '!px-10 !py-5 ',
   xl: '!px-12 !py-6',

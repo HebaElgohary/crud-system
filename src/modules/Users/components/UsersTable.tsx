@@ -8,7 +8,7 @@ export default function UsersTable  ({setSelectedUserId,setViewId}:{setViewId:Re
    const {mutate}=useDeleteUser()
    const handleDelete=(id:number)=>{mutate(id)}
  //////////////////////////
-    const USERS_PER_PAGE = 5;
+    const USERS_PER_PAGE = 4;
 
   const [currentPage, setCurrentPage] = useState(1);
 

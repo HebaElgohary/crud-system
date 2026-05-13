@@ -21,7 +21,7 @@ const [viewId,setViewId]=useState<number|null>(null)
   return (
     <MainLyout>
       <PageHeading title="Users" subtitle="Mange your users" />
-<div className="!px-11 !my-3 ">
+<div className="md:!px-11 md:!my-3 justify-center !mx-3 flex flex-col items-center">
       <MainCards />
 
       <div className="flex gap-3 lg:flex-row flex-col justify-around w-full">

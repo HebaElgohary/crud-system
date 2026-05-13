@@ -60,7 +60,7 @@ export default function Form<T>({
         {getFormFields(formName).map((field: updateType) => (
           <FormField  defaultValue={userData?.[field.name as keyof user]} key={field.id} {...field} />
         ))}
-        <div className="flex flex-row justify-start items-end">
+        <div className="flex flex-row w-50 items-end  ">
           <Button
             type="submit"
             variant="violet"

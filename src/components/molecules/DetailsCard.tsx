@@ -31,7 +31,7 @@ const DetailsCard = forwardRef<HTMLDivElement, Props>(
           <span>{data.name}</span>
         </div>
 
-        <div className='flex flex-row gap-11 items-center ds-text-black !mb-6'>
+        <div className='flex flex-row gap-11 overflow-hidden items-center ds-text-black !mb-6'>
           <span>Email</span>
           <span>{data.email}</span>
         </div>
