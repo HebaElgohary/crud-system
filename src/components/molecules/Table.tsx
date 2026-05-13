@@ -4,7 +4,8 @@ import { Users } from "../../assets/icons/icons";
 import FormHeading from "./form/FormHeading";
 import { user } from "../../modules/Users/types/types";
 import Button from "../atoms/Button";
-export default function Table({ data: users, setSelectedUserId }: { data?: user[], setSelectedUserId: React.Dispatch<React.SetStateAction<number | null>> }) {
+export default function Table({ data: users, onDelete,setSelectedUserId,setViewId }: { data?: user[],onDelete: (id: number) => void,setViewId: React.Dispatch<React.SetStateAction<number | null>>, setSelectedUserId: React.Dispatch<React.SetStateAction<number | null>> }) {
+ 
   return (
     <div className="flex flex-col gap-5  !p-5 border ds-border-disabled rounded-xl ds-bg-white">
       <FormHeading
@@ -41,7 +42,8 @@ export default function Table({ data: users, setSelectedUserId }: { data?: user[
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td className="flex flex-col lg:flex-row !p-3 justify-center  ">
-                    <Button
+                    <Button 
+                    onClick={()=>setViewId(user.id)}
                       variant="blue"
                       size="sm"
                       fill
@@ -64,6 +66,7 @@ export default function Table({ data: users, setSelectedUserId }: { data?: user[
                       variant="danger"
                       size="sm"
                       fill
+                      onClick={() => onDelete(user.id)}
 
                       className="!mt-1 !mx-3 rounded-md"
                     >

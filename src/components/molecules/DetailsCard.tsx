@@ -3,7 +3,7 @@ import FormHeading from './form/FormHeading'
 import { User } from '../../assets/icons/icons'
 import { user } from '@/src/modules/Users/types/types'
 
-export default function UserDetailsCard({data}:{data:user}) {
+export default function DetailsCard({data}:{data:user}) {
   return (
     <div className='flex ds-bg-main !p-5 rounded-xl h-fit flex-col border border-gray-300 '>
         <FormHeading label='User Details' icon={User} iconColor='blue' titleVariant='black'/>
