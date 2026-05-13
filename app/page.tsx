@@ -8,6 +8,7 @@ import UpdateForm from "@/src/components/molecules/form/UpdateForm";
 import UsersTable from "@/src/modules/Users/components/UsersTable";
 import UserDetailsCard from "@/src/components/molecules/UserDetailsCard";
 import CreateUserForm from "@/src/modules/Users/components/CreateUserForm";
+import UpdateUserForm from "@/src/modules/Users/components/UpdateUserForm";
 export default function Home() {
   const boxRef = useRef(null);
   useEffect(() => {
@@ -29,7 +30,7 @@ export default function Home() {
 
      <div className="flex flex-col gap-5 w-full lg:w-1/4 ">
       <UserDetailsCard data={{id:1,name:"name",email:"email"}} />
-     <UpdateForm />
+     <UpdateUserForm />
     </div>
      </div>
      </div>
