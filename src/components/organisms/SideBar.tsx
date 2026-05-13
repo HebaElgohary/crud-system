@@ -1,14 +1,14 @@
 import  { useState } from 'react'
 import Title from '../atoms/Title'
 import Icon from '../atoms/Icon'
-import { Users,UserPlus,Settings   } from '../../assets/icons/icons'
+import { Users,UserPlus,Settings, MoveLeft   } from '../../assets/icons/icons'
 import Tab from '../molecules/Tab'
 
 export default function SideBar() {
    const [active, setActive] = useState('users')
   
   return (
-    <div className='hidden md:block lg:w-1/5 !p-7  border border-gray-300  '>
+    <div className=' hidden md:block  lg:w-1/5 !p-7  border border-gray-300  '>
     {/* heading */}
     <div className='flex gap-2 items-center'>
     <Icon className='ds-text-violet ' Icon={Users} size={30} />
@@ -24,6 +24,7 @@ export default function SideBar() {
 <Tab onClick={() => setActive('settings')} selected={active === 'settings'} iconProps={{Icon:Settings,size:20}}  titleProps={{children:'Settings',size:'sm'}} />
 </div>
 {/* ////////// */}
+<span className='fixed bottom-22 left-14 flex gap-2 items-center ds-text-gray'>logout <Icon Icon={MoveLeft} size={20} /></span>
 
     </div>
   )
