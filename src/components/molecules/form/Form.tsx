@@ -54,13 +54,13 @@ export default function Form<T>({
         className={
           layout === "cols"
             ? "flex flex-col gap-5 mt-5  "
-            : "flex flex-col lg:flex-row gap-5 mt-5 items-stretch  lg:items-end "
+            : "flex flex-col lg:flex-row gap-5 mt-5 items-stretch  lg:items-end"
         }
       >
         {getFormFields(formName).map((field: updateType) => (
           <FormField  defaultValue={userData?.[field.name as keyof user]} key={field.id} {...field} />
         ))}
-        <div>
+        <div className="flex flex-row justify-start items-end">
           <Button
             type="submit"
             variant="violet"

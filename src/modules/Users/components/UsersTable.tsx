@@ -33,7 +33,7 @@ const totalPages = Math.ceil((data?.length || 0) / USERS_PER_PAGE);
             onClick={() => setCurrentPage(index + 1)}
             className={`!px-4 !py-2 border rounded ${
               currentPage === index + 1
-                ? 'bg-violet-500 text-white'
+                ? 'ds-bg-blue text-white'
                 : 'bg-white'
             }`}
           >
