@@ -11,7 +11,7 @@ interface Props {
 }
 
 
-export default function Button({ children,size='md', className,type='button', variant='green',fill=false}: Props) {
+export default function Button({onClick, children,size='md', className,type='button', variant='green',fill=false}: Props) {
  const variants = {
    green: 'ds-bg-green',
    blue: 'ds-bg-blue',
@@ -27,7 +27,7 @@ const sizes = {
 }
  
   return (
-    <button type={type}
+    <button type={type} onClick={onClick}
       className={cn(variants[variant] ,sizes[size],
     ` bg-red-500 ${fill? 'w-full' : 'w-fit'} text-white  font-bold  rounded `,className)}
     >

@@ -6,6 +6,7 @@ import { editPayload } from '../types/types'
 export default function UpdateUserForm({id}:{id:number}) {
     const {mutate}=useEditUser(id)
     const {data}=useGetUser(id)
+    console.log('dataaa user is ',data)
 
     const onsubmit=(data:editPayload)=>
         

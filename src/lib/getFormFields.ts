@@ -1,8 +1,13 @@
 import { formNameType } from "../types/types";
-
 type getFormFieldsType = (formName: formNameType) => any[];
+export type updateType = {
+  id: number;
+  label: string;
+  type: string;
+  name: string;
+  placeholder: string;};
 export const getFormFields: getFormFieldsType = (formName) => {
-  const updateFields = [
+  const updateFields:updateType[] = [
     {
       id: 1,
       label: "Name",
@@ -18,7 +23,7 @@ export const getFormFields: getFormFieldsType = (formName) => {
       placeholder: "Enter email",
     },
   ];
-  const createFields = [
+  const createFields:updateType[] = [
     {
       id: 1,
       label: "Name",

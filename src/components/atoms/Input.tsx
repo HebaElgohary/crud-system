@@ -15,7 +15,7 @@ export default function Input({
   return (
     <input
       id={id}
-      value={value}
+      defaultValue={value}
       name={name}
       type={type}
       placeholder={placeholder}

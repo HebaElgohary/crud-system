@@ -5,6 +5,7 @@ import { editPayload, user } from '@/src/modules/Users/types/types'
 
 type onSubmitType=(data:editPayload)=>void
 export default function UpdateForm({onSubmit,userId,userData}:{userId:number,onSubmit:onSubmitType,userData:user|undefined}) {
+ console.log('data in updateForm is',userData)
   return (
     <div>
     <Form<editPayload> label='Update User'

@@ -1,7 +1,7 @@
 'use client'
 import React, { ComponentType } from "react";
 import FormHeading from "./FormHeading";
-import { getFormFields } from "@/src/lib/getFormFields";
+import { getFormFields, updateType } from "@/src/lib/getFormFields";
 import FormField from "./FormField";
 import { formNameType } from "@/src/types/types";
 import Button from "../../atoms/Button";
@@ -30,11 +30,11 @@ export default function Form<T>({
   onSubmit,
 }: FormProps<T>) {
   const formRef = React.useRef<HTMLFormElement>(null);
+    console.log('user data in Form iss',userData)
 
   const handelSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("handelSubmit");
-    console.log('user data iss',userData)
     console.log(onSubmit)
     if (!formRef.current) return;
     const formData = new FormData(formRef.current);
@@ -56,8 +56,8 @@ export default function Form<T>({
             : "flex flex-col lg:flex-row gap-5 mt-5 items-stretch  lg:items-end "
         }
       >
-        {getFormFields(formName).map((field:{id:number,label:string,type:string,name:string,placeholder:string}) => (
-          <FormField  defaultValue={userData?.[field.name]} key={field.id} {...field} />
+        {getFormFields(formName).map((field: updateType) => (
+          <FormField  defaultValue={userData?.[field.name as keyof user]} key={field.id} {...field} />
         ))}
         <div>
           <Button

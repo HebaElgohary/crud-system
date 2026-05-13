@@ -55,7 +55,8 @@ export default function Table({ data: users, setSelectedUserId }: { data?: user[
                       size="sm"
                       fill
                       className="!mt-1 !mx-3 rounded-md"
-                      onClick={() => setSelectedUserId(user.id)}
+                      onClick={() => {console.log(user.id) 
+                        setSelectedUserId(user.id)}}
                     >
                       Edit
                     </Button>
