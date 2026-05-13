@@ -4,10 +4,11 @@ import { Users } from "../../assets/icons/icons";
 import FormHeading from "./form/FormHeading";
 import { user } from "../../modules/Users/types/types";
 import Button from "../atoms/Button";
+import { useState } from "react";
 export default function Table({ data: users, onDelete,setSelectedUserId,setViewId }: { data?: user[],onDelete: (id: number) => void,setViewId: React.Dispatch<React.SetStateAction<number | null>>, setSelectedUserId: React.Dispatch<React.SetStateAction<number | null>> }) {
- 
+
   return (
-    <div className="flex flex-col gap-5  !p-5 border ds-border-disabled rounded-xl ds-bg-white">
+    <div className="flex flex-col gap-5  !p-5 border ds-border-gray rounded-xl ds-bg-white">
       <FormHeading
         label="All Users"
         icon={Users}

@@ -44,7 +44,7 @@ export default function Form<T>({
     onSubmit?.(data);
   };
   return (
-    <div className="border border-gray-300 ds-bg-violet-200 !p-5 rounded-xl !my-5 ">
+    <div className="border border-gray-300 ds-bg-violet-200 !p-5 rounded-xl !my-11 ">
       <FormHeading label={label} icon={icon} />
 
       <form

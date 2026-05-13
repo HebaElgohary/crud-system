@@ -23,7 +23,7 @@ export default function Password({
     <div
       className='
         border border-gray-400
-        !px-4 !py-2
+        !px-4 !py-1
         rounded-md
         flex justify-between items-center
 
