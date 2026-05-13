@@ -4,7 +4,6 @@ import { fade } from "@/src/animations/fade";
 import MainLyout from "@/src/components/templates/MainLyout";
 import MainCards from "@/src/components/molecules/MainCards";
 import PageHeading from "@/src/components/molecules/PageHeading";
-import UpdateForm from "@/src/components/molecules/form/UpdateForm";
 import UsersTable from "@/src/modules/Users/components/UsersTable";
 import UserDetailsCard from "@/src/components/molecules/UserDetailsCard";
 import CreateUserForm from "@/src/modules/Users/components/CreateUserForm";
@@ -32,7 +31,7 @@ export default function Home() {
 
      <div className="flex flex-col gap-5 w-full lg:w-1/4 ">
       <UserDetailsCard data={{id:1,name:"name",email:"email"}} />
-     <UpdateUserForm />
+     {selectedUserId && <UpdateUserForm id={selectedUserId }/>}
     </div>
      </div>
      </div>

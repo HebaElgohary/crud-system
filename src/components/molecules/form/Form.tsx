@@ -5,6 +5,7 @@ import { getFormFields } from "@/src/lib/getFormFields";
 import FormField from "./FormField";
 import { formNameType } from "@/src/types/types";
 import Button from "../../atoms/Button";
+import { user } from "@/src/modules/Users/types/types";
 
 type onSubmitType<T> = (formData: T) => void;
 interface FormProps<T> {
@@ -14,10 +15,14 @@ interface FormProps<T> {
   formName: formNameType;
   btn: string;
   onSubmit?: onSubmitType<T>;
+  userId?: number;
+  userData?: user;
 }
 
 export default function Form<T>({
   label,
+  userId,
+  userData,
   icon,
   formName,
   btn,
@@ -29,6 +34,7 @@ export default function Form<T>({
   const handelSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("handelSubmit");
+    console.log('user data iss',userData)
     console.log(onSubmit)
     if (!formRef.current) return;
     const formData = new FormData(formRef.current);
@@ -50,8 +56,8 @@ export default function Form<T>({
             : "flex flex-col lg:flex-row gap-5 mt-5 items-stretch  lg:items-end "
         }
       >
-        {getFormFields(formName).map((field) => (
-          <FormField key={field.id} {...field} />
+        {getFormFields(formName).map((field:{id:number,label:string,type:string,name:string,placeholder:string}) => (
+          <FormField  defaultValue={userData?.[field.name]} key={field.id} {...field} />
         ))}
         <div>
           <Button

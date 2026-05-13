@@ -5,7 +5,9 @@ export default function Input({
   id,
   type,
   placeholder,
+  value
 }: {
+  value?: string;
   name: string;
   id: string;
   type: string;
@@ -14,6 +16,7 @@ export default function Input({
   return (
     <input
       id={id}
+      value={value}
       name={name}
       type={type}
       placeholder={placeholder}
