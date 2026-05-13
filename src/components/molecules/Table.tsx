@@ -1,12 +1,10 @@
 "use client";
 import { tableHeading } from "../../data/table";
-import { Edit, Trash, Users } from "../../assets/icons/icons";
+import { Users } from "../../assets/icons/icons";
 import FormHeading from "./form/FormHeading";
-import { useGetUsers } from "@/src/modules/Users/hooks/useGetUsers";
 import { user } from "../../modules/Users/types/types";
-import Icon from "../atoms/Icon";
 import Button from "../atoms/Button";
-export default function Table({ data: users }: { data?: user[] }) {
+export default function Table({ data: users, setSelectedUserId }: { data?: user[], setSelectedUserId: React.Dispatch<React.SetStateAction<number | null>> }) {
   return (
     <div className="flex flex-col gap-5  !p-5 border ds-border-disabled rounded-xl ds-bg-white">
       <FormHeading
@@ -57,6 +55,7 @@ export default function Table({ data: users }: { data?: user[] }) {
                       size="sm"
                       fill
                       className="!mt-1 !mx-3 rounded-md"
+                      onClick={() => setSelectedUserId(user.id)}
                     >
                       Edit
                     </Button>

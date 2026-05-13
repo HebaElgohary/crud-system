@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { fade } from "@/src/animations/fade";
 import MainLyout from "@/src/components/templates/MainLyout";
 import MainCards from "@/src/components/molecules/MainCards";
@@ -10,6 +10,8 @@ import UserDetailsCard from "@/src/components/molecules/UserDetailsCard";
 import CreateUserForm from "@/src/modules/Users/components/CreateUserForm";
 import UpdateUserForm from "@/src/modules/Users/components/UpdateUserForm";
 export default function Home() {
+  const [selectedUserId, setSelectedUserId] = useState<number | null>(null);
+
   const boxRef = useRef(null);
   useEffect(() => {
     if (boxRef.current) {
@@ -24,7 +26,7 @@ export default function Home() {
 
       <div className="flex gap-3 lg:flex-row flex-col justify-around w-full">
       <div>
-      <UsersTable />
+      <UsersTable setSelectedUserId={setSelectedUserId} />
       <CreateUserForm />
       </div>
 
