@@ -9,7 +9,8 @@ export const useEditUser = (id:number) => {
         mutationFn:(data:editPayload)=>editUserApi(id,data),
         options: {
             onSuccess: (data) => {
-                queryClient.invalidateQueries({ queryKey: ["user",id] });
+              queryClient.invalidateQueries({ queryKey: ["user", id] });
+queryClient.invalidateQueries({ queryKey: ["users"] });
                    Swal.fire({
       title: "Edited!",
       text: "User Updated successfully",

@@ -7,9 +7,9 @@ export default function Password({
   id,
   type,
   placeholder,
-  value
+  defaultValue
 }: {
-  value?: string
+  defaultValue?: string
   name: string
   id: string
   type: string
@@ -36,7 +36,7 @@ export default function Password({
       <input
         className='w-full ds-text-black focus:outline-none placeholder:text-gray-400'
         id={id}
-        defaultValue={value}
+        defaultValue={defaultValue}
         name={name}
         type={showPassword ? 'text' : type}
         placeholder={placeholder}

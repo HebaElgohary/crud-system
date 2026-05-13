@@ -48,6 +48,7 @@ export default function Form<T>({
       <FormHeading label={label} icon={icon} />
 
       <form
+      key={userId}
         onSubmit={handelSubmit}
         ref={formRef}
         className={
