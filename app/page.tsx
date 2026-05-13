@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { fade } from "@/src/animations/fade";
-import MainLyout from "@/src/components/templates/MainLyout";
-import MainCards from "@/src/components/molecules/MainCards";
+import { fade } from    "@/src/animations/fade";
+import MainLyout from   "@/src/components/templates/MainLyout";
+import MainCards from   "@/src/components/molecules/MainCards";
 import PageHeading from "@/src/components/molecules/PageHeading";
-import UsersTable from "@/src/modules/Users/components/UsersTable";
+import UsersTable from  "@/src/modules/Users/components/UsersTable";
 import UserDetailsCard from "@/src/modules/Users/components/UserDetailsCard";
 import CreateUserForm from "@/src/modules/Users/components/CreateUserForm";
 import UpdateUserForm from "@/src/modules/Users/components/UpdateUserForm";
