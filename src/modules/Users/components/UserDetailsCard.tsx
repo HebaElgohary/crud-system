@@ -11,7 +11,7 @@ export default function UserDetailsCard({id}:{id:number}) {
     if (cardRef.current) {
       fade(cardRef.current);
     }
-  }, [id])
+  },[data])
     
   return (
     <div>

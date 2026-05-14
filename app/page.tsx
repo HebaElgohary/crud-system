@@ -1,6 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { fade } from    "@/src/animations/fade";
+import { useState } from "react";
 import MainLyout from   "@/src/components/templates/MainLyout";
 import MainCards from   "@/src/components/molecules/MainCards";
 import PageHeading from "@/src/components/molecules/PageHeading";
@@ -12,12 +11,7 @@ import UpdateUserForm from "@/src/modules/Users/components/UpdateUserForm";
 export default function Home() {
   const [selectedUserId, setSelectedUserId] = useState<number | null>(null);
 const [viewId,setViewId]=useState<number|null>(null)
-  const boxRef = useRef(null);
-  useEffect(() => {
-    if (boxRef.current) {
-      fade(boxRef.current);
-    }
-  }, []);
+
   return (
     <MainLyout>
       <PageHeading title="Users" subtitle="Mange your users" />
@@ -30,7 +24,7 @@ const [viewId,setViewId]=useState<number|null>(null)
       <CreateUserForm />
       </div>
 
-     <div className="flex flex-col gap-5 w-full lg:w-1/4 ">
+     <div className="flex flex-col gap-3 w-full lg:w-1/4 ">
      {viewId && <UserDetailsCard id={viewId} />}
      {selectedUserId && <UpdateUserForm id={selectedUserId }/>}
     </div>
