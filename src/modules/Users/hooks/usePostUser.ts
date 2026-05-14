@@ -1,7 +1,7 @@
 import { useApiMutation } from "@/src/hooks/useApiMutation";
 import { postUserApi } from "../api/postUserApi";
 import { useQueryClient } from "@tanstack/react-query";
-import{tokenServices} from "../../../services/tokenService"
+import { tokenServices } from "@/src/services/tokenService";
 import Swal from "sweetalert2";
 export const usePostUser = () => {
   const queryClient = useQueryClient();
@@ -11,6 +11,7 @@ export const usePostUser = () => {
 
 
       onSuccess: (data) => {
+        tokenServices.setToken(data.accessToken);
         queryClient.invalidateQueries({ queryKey: ["users"] });
             Swal.fire({
       title: "Added!",
