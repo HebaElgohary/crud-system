@@ -1,10 +1,11 @@
+'use client'
 import Button from '@/src/components/atoms/Button'
 import Title from '@/src/components/atoms/Title'
 import dynamic from 'next/dynamic'
 
 const Lottie = dynamic(
   () => import('@lottiefiles/react-lottie-player').then(mod => mod.Player),
-  { ssr: true }
+  { ssr: false }
 )
 export default function NotFoundState() {
   return (
